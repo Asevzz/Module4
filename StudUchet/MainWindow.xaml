@@ -1,0 +1,54 @@
+﻿<Window x:Class="StudUchet.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudUchet"
+        mc:Ignorable="d"
+         Title="Колледж ОКВГУ" Width="1080" Height="620">
+    <Grid>
+        <!-- Заголовок приложения -->
+        <TextBlock Text="Колледж ОКВГУ" FontSize="24" FontWeight="Bold" 
+                   HorizontalAlignment="Center" Margin="10" />
+
+        <!-- Выбор специальности -->
+        <TextBlock Text="Специальность:" Margin="10,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+        <ComboBox Name="SpecializationComboBox" Width="200" Height="30" Margin="100,50,0,0" 
+                  HorizontalAlignment="Left" VerticalAlignment="Top" 
+                  SelectionChanged="SpecializationComboBox_SelectionChanged"/>
+
+        <!-- Выбор курса -->
+        <TextBlock Text="Курс:" Margin="10,90,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+        <ComboBox Name="CourseComboBox" Width="100" Height="30" Margin="100,90,0,0"
+                  HorizontalAlignment="Left" VerticalAlignment="Top" />
+
+        <!-- Поле для ввода имени студента -->
+        <TextBlock Text="Имя студента:" Margin="10,130,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+        <TextBox Name="StudentNameTextBox" Width="200" Height="30" Margin="100,130,0,0" 
+                 HorizontalAlignment="Left" VerticalAlignment="Top" />
+
+        <!-- Поле для ввода отметок студента -->
+        <TextBlock Text="Оценки (через запятую):" Margin="10,170,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+        <TextBox Name="GradesTextBox" Width="200" Height="30" Margin="150,170,0,0" 
+                 HorizontalAlignment="Left" VerticalAlignment="Top" />
+
+        <!-- Кнопка для добавления студента -->
+        <Button Name="AddStudentButton" Content="Добавить Студента" Width="150" Height="30"
+                Margin="10,220,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                Click="AddStudentButton_Click"/>
+
+        <!-- Список студентов -->
+        <ListBox Name="StudentList" Margin="350,50,10,100" HorizontalAlignment="Right" VerticalAlignment="Top" />
+
+        <!-- Кнопка для сохранения данных -->
+        <Button Name="SaveButton" Content="Сохранить данные" Width="150" Height="30" 
+                Margin="10,506,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                Click="SaveButton_Click"/>
+        <!-- Кнопка для очистки списка студентов -->
+        <Button x:Name="ClearListButton" Content="Очистить список" Width="100" Height="30" 
+                Margin="10,540,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                Click="ClearListButton_Click"/>
+
+
+    </Grid>
+</Window>
